@@ -36,6 +36,9 @@ spec:
       containers:
       - name: user
         image: chakradhar05/user:v1
+        envFrom:
+        - configMapRef:
+           name: user-cm
         readinessProbe:
          tcpSocket:
           port: 8080
