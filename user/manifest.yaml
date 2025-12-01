@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: user
-        image: chakradhar05/user:v1
+        image: chakradhar05/users:v1
         envFrom:
         - configMapRef:
            name: user-cm
