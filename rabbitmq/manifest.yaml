@@ -7,9 +7,6 @@ metadata:
     project: roboshop
     component: rabbitmq
     tier: db
-  env: 
-    RABBITMQ_DEFAULT_USER: "roboshop"
-    RABBITMQ_DEFAULT_PASS: "roboshop123"
 spec:
   replicas: 1
   selector:
@@ -30,6 +27,9 @@ spec:
       - name: rabbitmq
         image: rabbitmq:3
         imagePullPolicy: Always
+        env: 
+          RABBITMQ_DEFAULT_USER: "roboshop"
+          RABBITMQ_DEFAULT_PASS: "roboshop123"  
         readinessProbe:
          tcpSocket:
           port: 5672
