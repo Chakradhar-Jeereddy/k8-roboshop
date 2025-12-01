@@ -26,9 +26,6 @@ spec:
       containers:
       - name: frontend
         image: chakradhar05/frontend:v1
-        envFrom:
-        - configMapRef:
-           name: frontend-cm
         ports:
         - name: liveness-port
           containerPort: 80
