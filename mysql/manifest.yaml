@@ -32,6 +32,7 @@ spec:
           port: 3306
          initialDelaySeconds: 15
          periodSeconds: 10
+      # Liveness probe should have more intial delay
         livenessProbe:
          tcpSocket:
           port: 3306
