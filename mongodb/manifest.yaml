@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+  labels:
+    project: roboshop
+    component: mongodb
+    tier: db
+spec:
+  replicas: 1
+  selector:
+  # These are labels to select pods.
+    matchLabels:
+     project: roboshop
+     component: mongodb
+     tier: db
+# Pod defination
+  template:
+    metadata:
+      labels:
+       project: roboshop
+       component: mongodb
+       tier: db
+    spec:
+      containers:
+      - name: mongodb
+        image: chakradhar05/mongodb:v1
+        ports:
+        - containerPort: 27017
