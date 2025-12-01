@@ -8,3 +8,4 @@ spec:
   containers:
   - name: debug
     image: chakradhar05/debug:v1
+    imagePullPolicy: Always
