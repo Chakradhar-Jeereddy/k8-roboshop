@@ -35,6 +35,7 @@ spec:
       containers:
       - name: shipping
         image: chakradhar05/shipping:v1
+        imagePullPolicy: Always
         envFrom:
         - configMapRef:
            name: shipping-cm
