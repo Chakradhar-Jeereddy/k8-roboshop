@@ -118,8 +118,8 @@ spec:
          periodSeconds: 10
         volumeMounts:      #Parallel to name of the container and image of the container
         - name: nginx-conf
-          mountPath: /etc/nginx/nginx.conf
-          subPath: nginx.conf
+          mountPath: /etc/nginx/nginx.conf #Entire volume
+          subPath: nginx.conf # folder or file inside volume, multi app containers using same pv.
       volumes:          # Volumes are created parallel to continers(indentations)
       - name: nginx-conf
         configMap: 
