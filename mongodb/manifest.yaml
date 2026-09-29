@@ -1,3 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: roboshop-dev
+  name: roboshop-dev
+---  
 apiVersion: apps/v1
 kind: Deployment
 metadata:
